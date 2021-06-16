@@ -22,11 +22,13 @@ namespace Sorteador
         {
             lblresultadosorteio.Visible = false;
             AtualizarPessoas();
+          
+            
            
         }
         public void AtualizarPessoas()
         {
-
+           
         }
     }
 }
