@@ -31,14 +31,14 @@ namespace Sorteador
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbInicio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbFinal = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbQuantidade = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblresultado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -54,12 +54,12 @@ namespace Sorteador
             this.label1.TabIndex = 0;
             this.label1.Text = "do número:";
             // 
-            // textBox1
+            // tbInicio
             // 
-            this.textBox1.Location = new System.Drawing.Point(318, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(54, 23);
-            this.textBox1.TabIndex = 1;
+            this.tbInicio.Location = new System.Drawing.Point(318, 83);
+            this.tbInicio.Name = "tbInicio";
+            this.tbInicio.Size = new System.Drawing.Size(54, 23);
+            this.tbInicio.TabIndex = 1;
             // 
             // label2
             // 
@@ -71,12 +71,12 @@ namespace Sorteador
             this.label2.TabIndex = 2;
             this.label2.Text = "até:";
             // 
-            // textBox2
+            // tbFinal
             // 
-            this.textBox2.Location = new System.Drawing.Point(441, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(54, 23);
-            this.textBox2.TabIndex = 3;
+            this.tbFinal.Location = new System.Drawing.Point(441, 81);
+            this.tbFinal.Name = "tbFinal";
+            this.tbFinal.Size = new System.Drawing.Size(54, 23);
+            this.tbFinal.TabIndex = 3;
             // 
             // button1
             // 
@@ -108,12 +108,12 @@ namespace Sorteador
             this.label4.TabIndex = 6;
             this.label4.Text = "Sortear";
             // 
-            // textBox3
+            // tbQuantidade
             // 
-            this.textBox3.Location = new System.Drawing.Point(298, 29);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(43, 23);
-            this.textBox3.TabIndex = 7;
+            this.tbQuantidade.Location = new System.Drawing.Point(298, 29);
+            this.tbQuantidade.Name = "tbQuantidade";
+            this.tbQuantidade.Size = new System.Drawing.Size(43, 23);
+            this.tbQuantidade.TabIndex = 7;
             // 
             // label5
             // 
@@ -142,13 +142,13 @@ namespace Sorteador
             this.ClientSize = new System.Drawing.Size(672, 296);
             this.Controls.Add(this.lblresultado);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbQuantidade);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbFinal);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbInicio);
             this.Controls.Add(this.label1);
             this.Name = "SorteioNumero";
             this.Text = "SorteioNumero";
@@ -162,14 +162,14 @@ namespace Sorteador
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbInicio;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbFinal;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbQuantidade;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblresultado;
     }
