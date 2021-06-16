@@ -35,6 +35,7 @@ namespace Sorteador
             this.label3 = new System.Windows.Forms.Label();
             this.lblresultadosorteio = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,17 +89,27 @@ namespace Sorteador
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(429, 33);
+            this.dataGridView1.Location = new System.Drawing.Point(469, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(200, 206);
             this.dataGridView1.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(348, 159);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 29);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Limpar Lista";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // SorteioPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 359);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblresultadosorteio);
             this.Controls.Add(this.label3);
@@ -122,5 +133,6 @@ namespace Sorteador
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblresultadosorteio;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
