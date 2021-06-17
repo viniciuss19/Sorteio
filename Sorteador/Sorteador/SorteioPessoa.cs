@@ -19,7 +19,7 @@ namespace Sorteador
         public SorteioPessoa()
         {
             InitializeComponent();
-            
+          
         }
 
         private void SorteioPessoa_Load(object sender, EventArgs e)
@@ -34,12 +34,15 @@ namespace Sorteador
         public void AtualizarPessoas()
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = $"Data Source = DESKTOP - V3GENC1; Initial Catalog = Exercicio; Integrated Security = True";
+            conexao.ConnectionString = "Data Source=DESKTOP-V3GENC1;Initial Catalog=Sorteio;Integrated Security=True";
             SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+
             sql.CommandText = "Select Nome FROM Pessoas";
+
             try
             {
-
+                
                 conexao.Open();
                 int i = sql.ExecuteNonQuery();
             }
@@ -54,6 +57,57 @@ namespace Sorteador
                 adaptador.Fill(dt);
                 dataGridView1.DataSource = dt;
                 dataGridView1.ClearSelection();
+                conexao.Close();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = "Data Source=DESKTOP-V3GENC1;Initial Catalog=Sorteio;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+
+            sql.CommandText = "DELETE FROM PESSOAS";
+            try
+            {
+                conexao.Open();
+                int i = sql.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                dataGridView1.ClearSelection();
+                AtualizarPessoas();
+                conexao.Close();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = "Data Source=DESKTOP-V3GENC1;Initial Catalog=Sorteio;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+
+            try
+            {
+                conexao.Open();
+                sql.CommandText = $"INSERT INTO Pessoas (Nome) Values (@nome)";
+                sql.Parameters.AddWithValue("@nome", tbNomeAdd.Text);
+                int i = sql.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                tbNomeAdd.Clear();
+                AtualizarPessoas();
                 conexao.Close();
             }
         }
