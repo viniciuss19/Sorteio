@@ -127,6 +127,8 @@ namespace Sorteador
                 while (mreader.Read())
                 {
                     lblresultadosorteio.Text = Convert.ToString(mreader["Nome"]);
+                    deletarsorteado();
+
                 }
             }
             catch(Exception ex)
@@ -135,6 +137,29 @@ namespace Sorteador
             }
             finally
             {
+                conexao.Close();
+            }
+        }
+        public void deletarsorteado()
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = "Data Source=DESKTOP-V3GENC1;Initial Catalog=Sorteio;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+            sql.CommandText = $"DELETE FROM PESSOAS WHERE Nome = '{lblresultadosorteio.Text}'";
+            try
+            {
+                conexao.Open();
+                int i = sql.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                dataGridView1.ClearSelection();
+            
                 conexao.Close();
             }
         }

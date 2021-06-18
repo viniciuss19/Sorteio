@@ -32,6 +32,7 @@ namespace Sorteador
             {
                 resultado = resultado + " " + numerorandom.Next(Inicial,Final);
                 lblresultado.Text = resultado;
+                
             }
         }
     }
