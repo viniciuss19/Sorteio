@@ -29,9 +29,6 @@ namespace Sorteador
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblresultadosorteio = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -43,38 +40,11 @@ namespace Sorteador
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(187, 193);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(38, 23);
-            this.textBox1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(113, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Sortear";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(231, 191);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "pessoas";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(148, 320);
+            this.label3.Location = new System.Drawing.Point(146, 292);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 31);
             this.label3.TabIndex = 5;
@@ -84,7 +54,7 @@ namespace Sorteador
             // 
             this.lblresultadosorteio.AutoSize = true;
             this.lblresultadosorteio.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblresultadosorteio.Location = new System.Drawing.Point(282, 325);
+            this.lblresultadosorteio.Location = new System.Drawing.Point(280, 296);
             this.lblresultadosorteio.Name = "lblresultadosorteio";
             this.lblresultadosorteio.Size = new System.Drawing.Size(129, 25);
             this.lblresultadosorteio.TabIndex = 6;
@@ -138,12 +108,13 @@ namespace Sorteador
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(231, 251);
+            this.button3.Location = new System.Drawing.Point(213, 196);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 66);
+            this.button3.Size = new System.Drawing.Size(156, 66);
             this.button3.TabIndex = 12;
             this.button3.Text = "Sortear ";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // SorteioPessoa
             // 
@@ -158,9 +129,6 @@ namespace Sorteador
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblresultadosorteio);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
             this.Name = "SorteioPessoa";
             this.Text = "SorteioPessoa";
             this.Load += new System.EventHandler(this.SorteioPessoa_Load);
@@ -171,10 +139,6 @@ namespace Sorteador
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblresultadosorteio;
         private System.Windows.Forms.DataGridView dataGridView1;

@@ -111,5 +111,34 @@ namespace Sorteador
                 conexao.Close();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           string conexion = "Data Source=DESKTOP-V3GENC1;Initial Catalog=Sorteio;Integrated Security=True";
+            SqlConnection conexao = new SqlConnection(conexion);
+            SqlCommand cmd = new SqlCommand($"SELECT TOP 1 * FROM Pessoas ORDER BY NEWID()", conexao);
+            SqlDataReader mreader;
+            lblresultadosorteio.Visible = true;
+            try
+            {
+                conexao.Open();
+                mreader = cmd.ExecuteReader();
+
+                while (mreader.Read())
+                {
+                    lblresultadosorteio.Text = Convert.ToString(mreader["Nome"]);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
+
+    
 }
